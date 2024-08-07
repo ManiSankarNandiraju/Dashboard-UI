@@ -1,0 +1,781 @@
+/* Dashboard.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F5F7F8;
+  }
+  
+  .dashboard-container {
+
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .top-nav {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 60px; /* Fixed height */
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    margin-right: 50px; /* Add margin to separate from the search bar */
+
+  }
+  .logo img {
+  margin-top: 10px;
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.search-bar {
+  position: relative;
+  width: 250px; /* Reduced width */
+  background-color: #222831; /* Grey color */
+  border-radius: 5px; /* Slightly rounded corners */
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  margin-right: auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 30px; /* Adjust padding to fit the icon */
+  border: none;
+  background-color: transparent;
+  font-size: 14px; /* Slightly reduced font size */
+  color: white; /* Adjust text color if needed */
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  left: 10px; /* Position the icon inside the box */
+  color: white; /* Adjust icon color */
+}
+  
+  .nav-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Set the icon color */
+    background: none; /* Remove any default background */
+  }
+  .top-icon {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Set the icon color */
+    background: none; /* Remove any default background */
+  }
+  .top-icon :hover {
+    color: orange;
+  }
+
+  .icon-container-one {
+    background-color: #FD841F; /* Set your desired background color */
+    border-radius: 5px; /* Ensure the corners are square */
+    width: 50px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height to match the width */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding to ensure square shape */
+}
+
+.icon-container-two {
+  background-color: #E14D2A; /* Set your desired background color */
+  border-radius: 5px; /* Ensure the corners are square */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height to match the width */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding to ensure square shape */
+}
+
+
+.icon-container-three {
+  background-color: #CD104D; /* Set your desired background color */
+  border-radius: 5px; /* Ensure the corners are square */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height to match the width */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding to ensure square shape */
+}
+
+
+.icon-container-four {
+  background-color: #9C2C77; /* Set your desired background color */
+  border-radius: 5px; /* Ensure the corners are square */
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height to match the width */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove padding to ensure square shape */
+}
+  
+  .user-pic img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-image {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .side-nav {
+    background-color: #000000;
+    color: white;
+    width: 72px; /* Fixed width */
+    height: 100%; /* Full height to match top-nav */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .side-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px; /* Adjust as needed */
+    color: white;
+    position: relative;
+    font-size: 24px;
+  }
+  
+  .side-nav li:hover {
+    color: orange; /* Color of the icon on hover */
+  }
+  
+  .side-nav li.active {
+    color: orange; /* Color of the active icon */
+  }
+  
+  .side-nav li.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px; /* Width of the orange line */
+    height: 50%;
+    background-color: orange;
+    transform: translateY(-50%);
+  }
+  
+  /* Optional: Additional styling for bottom navigation items */
+  .bottom-nav li {
+    margin-top: auto;
+  }
+  
+  /* Styling for FontAwesome icons */
+  .side-nav .faHome.active {
+    color: orange;
+  }
+  
+  .side-nav .faHome.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 5px;
+    height: 50%;
+    background-color: orange;
+    transform: translateY(-50%);
+  }
+
+
+  .dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .dashboard-heading {
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    height: calc(100% - 80px); /* Adjust based on heading height */
+    box-sizing: border-box;
+  }
+  
+  .feedback-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .totals {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .total-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+    margin-left: 10px; /* Gap between boxes */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure it takes up available space */
+  }
+  
+  .value-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure it takes up full width */
+  }
+
+  .name {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .value {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .right-section {
+    font-weight: bold;
+  }
+  
+  .rise {
+    color: green;
+  }
+  
+  .fall {
+    color: red;
+  }
+  
+  .arrow {
+    margin-left: 5px;
+  }
+  
+  .activity {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 190px; /* Adjust the height as needed */
+    width: auto; /* Ensure it takes full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  .activity-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  
+  .activity-heading .title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .activity-heading .time-frame-selector {
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: white;
+  }
+  
+  .activity-heading .time-frame-selector select {
+    border: none;
+    background: none;
+    font-size: 1em;
+  }
+  
+  .activity-heading .time-frame-selector option {
+    padding: 5px;
+  }
+  
+  .activity-graph {
+    flex: 1; /* Take up the remaining space in the container */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  
+
+  .recent-orders-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .recent-orders-table-container {
+    max-height: 210px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  
+  .recent-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .recent-orders-table th, .recent-orders-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .recent-orders-table th {
+    background-color: #000000;
+    color: white;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Fixes the header at the top */
+    z-index: 1; /* Ensures the header stays above the rows */
+  }
+  
+  .customer-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .customer-image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+  }
+  
+  .status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+
+  .status.delivered {
+    color: green;
+  }
+  
+  .status.pending {
+    color: orange;
+  }
+  
+  .status.cancelled {
+    color: red;
+  }
+  /* Custom scrollbar styling for Webkit browsers (Chrome, Safari) */
+.recent-orders-table-container::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.recent-orders-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.recent-orders-table-container::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136); /* Color of the scrollbar */
+  border-radius: 4px; /* Rounded corners for the scrollbar */
+}
+
+.recent-orders-table-container::-webkit-scrollbar-thumb:hover {
+  background: rgb(48, 48, 48); /* Darker shade on hover */
+}
+
+
+
+
+  .net-profit {
+    padding: 20px; /* Adjust padding as necessary */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd; /* Optional: adds a border around the feedback section */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    height: 100px; /* Adjust height to be dynamic */
+    display: flex;
+    flex-direction: column; /* Stack content and footer vertically */
+  }
+  
+  .net-profit-content {
+    display: flex;
+
+    width: 100%;
+    align-items: center; /* Align items vertically centered */
+  }
+  
+  .net-profit-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 450px;
+  }
+  
+  .net-profit-header h2 {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .net-profit-amount {
+    font-size: 54px;
+    font-weight: bold;
+  }
+  
+  .circle-progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+  }
+  
+  .circular-progress-label {
+    font-weight: bold; /* Adjust as needed */
+    color: #000000; /* Ensure label color is visible */
+  }
+  
+  .net-profit-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  
+
+
+  .easymenu {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .easymenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .easymenu li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .easy-icon-container-goals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #065471;
+    margin-right: 10px;
+  }
+  .easy-icon-container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0A91AB;
+    margin-right: 10px;
+  }
+  
+  .easy-icon-container-dishes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFC045;
+    margin-right: 10px;
+  }
+  
+  
+  .easy-icon {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Set the icon color */
+    background: none; /* Remove any default background */
+  }
+  
+  .easymenu-arrow {
+    margin-left: auto;
+    font-size: 16px;
+  }
+
+
+
+  .customer-feedback-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+
+
+  .customer-feedback-container{
+    padding: 16px;
+    border-radius: 8px;
+    max-height: 179px; /* Adjust as needed */
+    overflow-y: auto; /* Enables scrolling */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd; /* Optional: adds a border around the feedback section */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Fixes the section at the top */
+    left: 0; /* Fixes the section at the left */
+    z-index: 1; /* Ensures the section stays above other content */
+  }
+  
+  .feedback-heading {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .feedback-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .feedback-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .feedback-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .feedback-stars {
+    display: flex;
+    font-size: 1.2rem;
+    color: lightgray; /* Default star color */
+    position: relative;
+    width: 100px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+  }
+  
+  .feedback-stars:before {
+    content: '★★★★★'; /* Full stars */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: gold; /* Filled star color */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .feedback-stars[data-rating="1"]:before { width: 20%; }
+  .feedback-stars[data-rating="2"]:before { width: 40%; }
+  .feedback-stars[data-rating="3"]:before { width: 60%; }
+  .feedback-stars[data-rating="4"]:before { width: 80%; }
+  .feedback-stars[data-rating="5"]:before { width: 100%; }
+  
+  .feedback-text {
+    margin: 0;
+  }
+  
+  /* Custom scrollbar styling for Webkit browsers (Chrome, Safari) */
+  .customer-feedback-container::-webkit-scrollbar {
+    width: 8px; /* Adjust width as needed */
+  }
+  
+  .customer-feedback-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .customer-feedback-container::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136); /* Color of the scrollbar */
+    border-radius: 4px; /* Rounded corners for the scrollbar */
+  }
+  
+  .customer-feedback-container::-webkit-scrollbar-thumb:hover {
+    background: rgb(48, 48, 48); 
+  }
+  
+
+
+  /* Mobile styles for Dashboard */
+
+/* Apply styles to the whole page */
+@media only screen and (max-width: 768px) {
+  .top-nav {
+    height: auto; /* Allow height to adjust */
+    flex-direction: column; /* Stack logo, search, and icons vertically */
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-right: 0; /* Remove margin to fit better */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width for search bar */
+    margin: 10px 0; /* Space around search bar */
+  }
+
+  .search-bar input {
+    font-size: 16px; /* Larger text for easier typing */
+  }
+
+  .nav-icons {
+    margin-top: 10px; /* Space between search and icons */
+    justify-content: flex-start; /* Align icons to the start */
+  }
+
+  .icon-container-one,
+  .icon-container-two,
+  .icon-container-three,
+  .icon-container-four {
+    width: 40px; /* Smaller icons */
+    height: 40px;
+  }
+
+  .side-nav {
+    width: 60px; /* Narrower sidebar */
+    height: auto; /* Allow height to adjust based on content */
+    flex-direction: row; /* Stack icons horizontally */
+    justify-content: space-around; /* Space icons evenly */
+  }
+
+  .side-nav li {
+    height: 50px; /* Adjust height for mobile view */
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .bottom-nav {
+    display: none; /* Hide bottom navigation on mobile */
+  }
+
+  .dashboard-container {
+    flex-direction: column; /* Stack side and main containers vertically */
+  }
+
+  .main-container {
+    width: 100%; /* Full width for main container */
+  }
+
+  .dashboard-heading {
+    font-size: 1.2em; /* Smaller heading font size */
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(6, auto); /* Stack boxes vertically */
+  }
+
+  .totals,
+  .activity,
+  .easymenu,
+  .recent-orders,
+  .customer-feedback {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .activity-graph {
+    height: 150px; /* Adjust graph height */
+  }
+
+  .recent-orders-table-container {
+    max-height: 180px; /* Adjust height for mobile view */
+  }
+
+  .customer-feedback-container {
+    max-height: 160px; /* Adjust height for mobile view */
+  }
+
+  .feedback-stars {
+    width: 80px; /* Adjust star rating width */
+  }
+
+  .feedback-stars:before {
+    font-size: 1rem; /* Adjust star size */
+  }
+}
